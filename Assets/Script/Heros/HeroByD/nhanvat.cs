@@ -41,6 +41,8 @@ public class nhanvat : MonoBehaviour
         hd.SetBool("chamdat", chamdat);
         hd.SetInteger("hp", hp);
         Nhay();
+        if (transform.position.y < -30)
+            transform.position = new Vector2(transform.position.x, 0);
     }
     private void FixedUpdate()
     {

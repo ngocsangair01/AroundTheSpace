@@ -5,7 +5,7 @@ using UnityEngine;
 public class Camera : MonoBehaviour
 {
     private Transform player;
-    private float minX = 0; 
+    private float minX = -5; 
     private float maxX = 130;
     private float minY = -18;
     private float maxY = 5;
@@ -23,12 +23,12 @@ public class Camera : MonoBehaviour
             Vector3 vitri = transform.position;
             vitri.x = player.position.x;
             if(vitri.x < minX)
-                vitri.x = 0;
+                vitri.x = -5;
             if(vitri.x > maxX)
                 vitri.x = maxX;
             vitri.y = player.position.y;
             if (vitri.y < minY)
-                vitri.y = 0;
+                vitri.y = minY;
             if (vitri.y > maxY)
                 vitri.y = maxY;
             transform.position = vitri;
